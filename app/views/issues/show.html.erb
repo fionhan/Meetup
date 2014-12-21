@@ -1,0 +1,5 @@
+<div>
+    <h5><%=@issue.title%></h5>
+    <%=link_to 'Destroy', issue_path(@issue) , method: :delete,data:{confirm:'Are you sure ?'}%>
+    <p><%=@issue.content%></p>
+</div>

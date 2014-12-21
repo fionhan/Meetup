@@ -1,7 +1,7 @@
 <div style="margin-top: 10px">
   <% issues.each do |i| %>
     <div>
-      title:<%=link_to i.title ,"#" %>
+      title:<%=link_to i.title ,issue_path(i) %>
       comment:5
     </div>
   <% end %>
