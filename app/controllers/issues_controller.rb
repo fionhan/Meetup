@@ -14,16 +14,13 @@ class IssuesController < ApplicationController
   end
 
   def create
-    puts "aaaaaa"
-    puts params[:issue]
-    Issue.create(params[:issue])
+    Issue.create(issue_params)
     redirect_to :root
   end
 
   private
   def issue_params
-    puts "xxxxxxx"
-    params.require(:issue).permit(:id, :title, :content)
+    params.require(:issue).permit(:title, :content)
   end
 
 end
